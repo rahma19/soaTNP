@@ -9,13 +9,5 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tnp';
-  games:any[]=[];
-  constructor(private http: HttpClient,private router:Router){  }
-
-  ngOnInit(): void { 
-   this.http.get<any[]>(environment.api).subscribe((res:any) =>this.games=res,
-   error=>console.log(error));
-
-  }
+  
 }
